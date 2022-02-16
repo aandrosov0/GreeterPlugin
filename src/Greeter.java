@@ -9,6 +9,10 @@ public class Greeter extends JavaPlugin {
 		config.addDefault("join", "&e<player> &4JOIN TO THE SERVER");
 		config.addDefault("quit", "&e<player> &4LEAVE FROM SERVER");
 
+		config.addDefault("join-display", null);
+		config.addDefault("join-display.title-display", "WELCOME TO THE SERVER");
+		config.addDefault("join-display.subtitle-display", "THANKS FOR USING Greeter PLUGIN");
+
 		config.options().copyDefaults(true);
 		saveConfig();
 

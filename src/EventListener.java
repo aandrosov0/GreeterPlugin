@@ -20,6 +20,10 @@ class EventListener implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		String joinMsg = parseConfig("join", event);
         event.setJoinMessage(joinMsg);
+
+		String titleDisplay = parseConfig("join-display.title-display", event);
+       	String subtitleDisplayMsg = parseConfig("join-display.subtitle-display", event);
+        event.getPlayer().sendTitle(titleDisplay, subtitleDisplayMsg);
 	}
 
 	@EventHandler 
