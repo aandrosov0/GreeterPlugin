@@ -19,17 +19,17 @@ class EventListener implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		String joinMsg = parseConfig("join", event);
-        event.setJoinMessage(joinMsg);
+        	event.setJoinMessage(joinMsg);
 
 		String titleDisplay = parseConfig("join-display.title-display", event);
-       	String subtitleDisplayMsg = parseConfig("join-display.subtitle-display", event);
-        event.getPlayer().sendTitle(titleDisplay, subtitleDisplayMsg);
+       		String subtitleDisplayMsg = parseConfig("join-display.subtitle-display", event);
+        	event.getPlayer().sendTitle(titleDisplay, subtitleDisplayMsg);
 	}
 
 	@EventHandler 
 	public void onPlayerQuit(PlayerQuitEvent event) {
-        String quitMsg = parseConfig("quit", event);
-        event.setQuitMessage(quitMsg);
+        	String quitMsg = parseConfig("quit", event);
+        	event.setQuitMessage(quitMsg);
 	}
 
 	private String parseConfig(String string, PlayerEvent event) {
